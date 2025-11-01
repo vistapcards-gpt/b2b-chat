@@ -5,29 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B2B Dost Chat Assistant</title>
   <style>
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
-      background: #f9fafb;
-      font-family: Arial, sans-serif;
-    }
-    .chat-container {
+      background: #f3f4f6;
+      font-family: system-ui, sans-serif;
       display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .chat-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+    }
+
+    iframe {
+      flex: 1;
+      border: none;
+      height: 100%;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <div class="chat-container">
-    <script src="https://chat.openai.com/embed.js"
-      data-openai-public-key="domain_pk_6905d48267e8819096132b92f0c921770b20131e71c979a1"
-      data-assistant-id="asst_e4wbFqQRacaWMPX4ftjEo7Ko"
-      data-theme="light"
-      data-title="Chat with B2B Dost Assistant 💬"
-      data-intro-message="👋 Namaste! I'm your B2B Dost Assistant — here to help you with digital cards, WhatsApp stores, and automation tools. How can I assist you today?">
-    </script>
+  <header>💬 B2B Dost Assistant – Your Business Growth Partner</header>
+  <div class="chat-wrapper">
+    <iframe
+      src="https://chat.openai.com/embed?assistant=asst_e4wbFqQRacaWMPX4ftjEo7Ko&publicKey=domain_pk_6905d48267e8819096132b92f0c921770b20131e71c979a1&theme=light"
+      allow="microphone; clipboard-read; clipboard-write"
+      width="100%"
+      height="100%">
+    </iframe>
   </div>
 </body>
 </html>
-
